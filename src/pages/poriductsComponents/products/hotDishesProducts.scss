@@ -1,0 +1,25 @@
+.hot-dishes-products-wrapper {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  padding: 10px;
+  gap: 5px;
+  .hot-dishes-products-img-section {
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+  }
+  .hot-dishes-products-title-section,
+  .hot-dishes-products-pricie-section {
+    color: #f94d00;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding-top: 5px;
+  }
+}

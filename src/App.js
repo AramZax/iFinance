@@ -1,16 +1,29 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SignIn from "./pages/signIn/SignIn";
+import "./app.scss";
+import Header from "./components/header/Header";
+import HotDishes from "./pages/hotDishes/HotDishes";
+import Drink from "./pages/drinks/Drink";
+import Salads from "./pages/salads/Salads";
+import Seafood from "./pages/seaFood/SeaFood";
+import Soups from "./pages/soups/Soups";
+import Desert from "./pages/dessert/Desert";
 
 const App = () => {
   return (
-    <Router>
-      <div className="app-container">
+    <div className="app-container">
+      <Router>
+        <Header />
         <Routes>
-          <Route path="/" element={<SignIn />} />
+          <Route path="/" element={<HotDishes />} />
+          <Route path="/drinks" element={<Drink />} />
+          <Route path="/salads" element={<Salads />} />
+          <Route path="/seaFood" element={<Seafood />} />
+          <Route path="/soups" element={<Soups />} />
+          <Route path="/desert" element={<Desert />} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 };
 

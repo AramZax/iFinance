@@ -1,0 +1,59 @@
+.header-wrapper {
+  .header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f94d00;
+  }
+  .header-menu-section,
+  .header-title-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .header-burger-icon {
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+  }
+  .header-title-section {
+    color: white;
+  }
+  /* Modal container */
+  .menu-modal {
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    display: flex; /* Center modal content */
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Modal content */
+  .menu-modal ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    :first-child {
+      font-size: 22px;
+    }
+  }
+}

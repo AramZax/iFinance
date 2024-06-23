@@ -13,19 +13,21 @@ const HotDishes = () => {
       </div>
       <div className="hot-dishes-content">
         {hotDisesProduct?.length ? (
-          hotDisesProduct.map((elem) => {
-            return (
-              <HotDishesProducts
-                key={elem.id}
-                id={elem.id}
-                img={elem.product_image}
-                title={elem.product_name}
-                price={elem.product_price}
-                aos={"fade-down"}
-                addBasket={handleAddWish}
-              />
-            );
-          })
+          hotDisesProduct.map(
+            ({ id, product_image, product_name, product_price }) => {
+              return (
+                <HotDishesProducts
+                  key={id}
+                  id={id}
+                  img={product_image}
+                  title={product_name}
+                  price={product_price}
+                  aos={"fade-down"}
+                  addBasket={handleAddWish}
+                />
+              );
+            }
+          )
         ) : (
           <div className="product-loader">
             <FallingLines

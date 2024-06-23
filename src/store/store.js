@@ -1,5 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
+import wishReducer from "./feature/userWish/userWish";
 
 export const store = configureStore({
-  reducer: {},
-})
+  reducer: {
+    wish: wishReducer,
+  },
+});

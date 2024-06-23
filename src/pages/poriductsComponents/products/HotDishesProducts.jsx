@@ -1,20 +1,25 @@
 import React from "react";
 import "./hotDishesProducts.scss";
+import Button from "../../../components/button/Button";
 
-const HotDishesProducts = () => {
+const HotDishesProducts = ({ aos, addBasket, img, title, price, id }) => {
   return (
-    <div className="hot-dishes-products-wrapper">
+    <div className="hot-dishes-products-wrapper" data-aos={aos}>
       <div className="hot-dishes-products-img-section">
-        <img
-          src="https://public.minio.cf5.io/tashir-production/static/origin/variant/%D5%B1%D5%BE%D5%A1%D5%B1%D5%A5%D5%B2.png"
-          alt="..."
-        />
+        <img src={img} alt="..." />
       </div>
       <div className="hot-dishes-products-title-section">
-        <span>Hot dish</span>
+        <span>{title}</span>
       </div>
       <div className="hot-dishes-products-pricie-section">
-        <span>50 usd</span>
+        <span>{price} Դրամ</span>
+      </div>
+      <div>
+        <Button
+          label={"add in basket"}
+          className={"basket-button"}
+          onClick={() => addBasket(img, title, price, id)}
+        />
       </div>
     </div>
   );

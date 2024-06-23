@@ -8,6 +8,7 @@ import Salads from "./pages/salads/Salads";
 import Seafood from "./pages/seaFood/SeaFood";
 import Soups from "./pages/soups/Soups";
 import Desert from "./pages/dessert/Desert";
+import Basket from "./pages/basket/Basket";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/seaFood" element={<Seafood />} />
           <Route path="/soups" element={<Soups />} />
           <Route path="/desert" element={<Desert />} />
+          <Route path="/basket" element={<Basket />} />
         </Routes>
       </Router>
     </div>
